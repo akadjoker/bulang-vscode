@@ -1,0 +1,25 @@
+{
+  "name": "bulang",
+  "displayName": "bulang",
+  "description": "my script language",
+  "version": "0.0.6",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "bu",
+      "aliases": ["bulang", "bu"],
+      "extensions": ["bu"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "bu",
+      "scopeName": "source.bu",
+      "path": "./syntaxes/bu.tmLanguage.json"
+    }]
+  }
+}

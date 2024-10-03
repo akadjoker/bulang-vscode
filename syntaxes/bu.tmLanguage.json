@@ -1,0 +1,69 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "bulang",
+	"patterns": [
+	  {
+		"include": "#keywords"
+	  },
+	  {
+		"include": "#strings"
+	  },
+	  {
+		"include": "#numbers"
+	  },
+	  {
+		"include": "#symbols"
+	  }
+	],
+	"repository": {
+	  "keywords": {
+		"patterns": [
+		  {
+			"name": "keyword.control.bu",
+			"match": "\\b(or|and|not|def|class|var|if|elif|else|nil,true,false,else|for|struct|enum|while|return|super|break|continue|switch|case|default|self|do)\\b"
+		  }
+		]
+	  },
+	  "strings": {
+		"name": "string.quoted.double.bu",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.bu",
+			"match": "\\\\."
+		  }
+		]
+	  },
+	  "numbers": {
+		"patterns": [
+		  {
+			"name": "constant.numeric.bu",
+			"match": "\\b\\d+(\\.\\d+)?\\b"
+		  }
+		]
+	  },
+	  "symbols": {
+		"patterns": [
+		  {
+			"name": "punctuation.separator.comma.bu",
+			"match": ","
+		  },
+		  {
+			"name": "punctuation.separator.semicolon.bu",
+			"match": ";"
+		  },
+		  {
+			"name": "keyword.operator.assignment.bu",
+			"match": "="
+		  },
+		  {
+			"name": "keyword.operator.comparison.bu",
+			"match": "[<>]"
+		  }
+		]
+	  }
+	},
+	"scopeName": "source.bu"
+  }
+  
